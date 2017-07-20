@@ -31,7 +31,7 @@ def convert_to_json(df):
         cnt += 1
     return data
 
-@app.route("/", methods=["GET"])
+@app.route("/data", methods=["GET"])
 def main():
     df = pd.read_csv("./data/feature.csv", index_col=0)
     df = round(df, 3)
