@@ -1,0 +1,19 @@
+.crossHair {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 150px;
+  padding: 10px;
+  color: white;
+}
+.crossHair p {
+  padding-left: 5px;
+}
+#cambus {
+  margin: 20px 0px;
+}
+#loading {
+  height: 500px;
+  padding-top: 200px;
+}
+#loading div {
+  margin: 0 auto;
+}
