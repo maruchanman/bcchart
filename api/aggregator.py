@@ -8,8 +8,8 @@ from io import StringIO
 
 def fetch_data():
     url = "http://api.coindesk.com/charts/data?" + \
-          "output=csv&data=ohlc&index=USD&startdate=2010-07-18&enddate=2017-07-16" + \
-          "&exchanges=bpi&dev=1"
+          "output=csv&data=ohlc&index=USD&startdate=2010-07-18&enddate={}" + \
+          "&exchanges=bpi&dev=1".format(datetime.date.today().strftime("%Y-%m-%d"))
     res = requests.get(url)
     data = StringIO(res.content.decode("utf-8"))
     df = pd.read_csv(data, index_col=0).ix[:-2]
