@@ -186,7 +186,7 @@ export default class TimeSeries extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/")
+    fetch("http://13.114.87.249/data")
       .then(res => res.json())
       .then(jsonData => this.setState({timeSeries: jsonData, showing: jsonData.slice(-this.state.timeSeriesLength)}))
   }
